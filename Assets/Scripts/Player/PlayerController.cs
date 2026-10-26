@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     public void increaseSize(float size)
     {
         transform.localScale += new Vector3(size, size, size);
+        camera.GetComponent<CameraController>().distanceMultiplier += new Vector2(size, size);
     }
 
     private void OnTriggerEnter(Collider other)

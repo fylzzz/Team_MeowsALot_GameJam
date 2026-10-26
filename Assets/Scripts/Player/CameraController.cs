@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float mouseSensitivity = 0.1f;
-    [SerializeField] private Vector2 distanceMultiplier = new Vector2(5f, 2f);
+    [SerializeField] public Vector2 distanceMultiplier = new Vector2(5f, 2f);
 
     private PlayerInput input;
     private InputAction lookAction;
