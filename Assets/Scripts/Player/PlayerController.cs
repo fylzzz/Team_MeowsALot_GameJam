@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
         {
             onDeath();
         }
+        if (Keyboard.current.equalsKey.wasPressedThisFrame)
+        {
+            increaseSize(1f);
+        }
         #endif
     }
 
@@ -47,6 +51,11 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         transform.position = currentCheckpoint.transform.position;
+    }
+
+    public void increaseSize(float size)
+    {
+        transform.localScale += new Vector3(size, size, size);
     }
 
     private void OnTriggerEnter(Collider other)
