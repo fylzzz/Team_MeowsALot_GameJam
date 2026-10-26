@@ -15,6 +15,8 @@ public class PlayerUnderLevel : MonoBehaviour
     [Header("fade")]
     [SerializeField] CanvasGroup resetCanvas;
     [SerializeField] private float fadeDuration = 0.5f;
+    [SerializeField] GameObject fadeCanvas;
+    [SerializeField] float fadeTime;
 
     private bool resetting;
 
@@ -22,6 +24,7 @@ public class PlayerUnderLevel : MonoBehaviour
     {
         respawnPoint.transform.position = player.transform.position;
         resetCanvas.alpha = 0f;
+        fadeCanvas.transform.localScale = new Vector3(20, 20, 20);
     }
 
     private void Update()
@@ -29,7 +32,7 @@ public class PlayerUnderLevel : MonoBehaviour
         if (resetting) return;
         if (player.transform.position.y < bottomOfMap.transform.position.y)
         {
-            StartCoroutine(fade(3f, 0f));
+            StartCoroutine(fateToandFrom());
         }
     }
     private void resetPlayerPosition()
@@ -48,10 +51,19 @@ public class PlayerUnderLevel : MonoBehaviour
         {
             elapsed += Time.unscaledDeltaTime;
             resetCanvas.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
+            fadeCanvas.transform.localScale = Vector3.Lerp(new Vector3(from, from, from)*20, new Vector3(to, to, to)*20, elapsed / fadeDuration);
             resetting = false;
             yield return null;
-            resetPlayerPosition();
         }
         resetCanvas.alpha = to;
+    }
+    private IEnumerator fateToandFrom()
+    {
+        resetting = true;
+        yield return StartCoroutine(fade(0f, fadeTime));
+        yield return new WaitForSecondsRealtime(0.5f);
+        resetPlayerPosition();
+        yield return StartCoroutine(fade(fadeTime, 0f));
+        resetting = false;
     }
 }

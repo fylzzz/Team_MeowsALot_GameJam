@@ -105,8 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d8b8b271573c94e9f05aee811d5197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monsters
-  sizeIncrease: 0.2
+  sizeIncrease: 0.3
   spinSpeed: 60
+  monstersInLevel: {fileID: 0}
 --- !u!136 &2932055301734538159
 CapsuleCollider:
   m_ObjectHideFlags: 0
