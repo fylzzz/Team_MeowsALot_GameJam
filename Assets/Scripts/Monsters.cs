@@ -5,6 +5,16 @@ public class Monsters : MonoBehaviour
     [SerializeField] float sizeIncrease = 0.2f;
     [SerializeField] float spinSpeed = 90f;
 
+    public MonstersInLevel monstersInLevel;
+
+    private void Start()
+    {
+        if (monstersInLevel == null)
+        {
+            monstersInLevel = FindObjectOfType<MonstersInLevel>();
+        }
+    }
+
     private void Update()
     {
         transform.Rotate(0f, spinSpeed * Time.deltaTime, 0f, Space.World);
@@ -28,5 +38,7 @@ public class Monsters : MonoBehaviour
 
         enabled = false; // stop the spin
         transform.SetParent(player.transform);
+
+        monstersInLevel.monsterCount++;
     }
 }
