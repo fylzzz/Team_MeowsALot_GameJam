@@ -8,6 +8,10 @@ public class PlayerUnderLevel : MonoBehaviour
     public Transform respawnPoint;
     public Transform bottomOfMap;
 
+    public PlayerController playerController;
+    public Rigidbody playerRB;
+    public GameObject playerObject;
+
     [Header("fade")]
     [SerializeField] CanvasGroup resetCanvas;
     [SerializeField] private float fadeDuration = 0.5f;
@@ -25,12 +29,13 @@ public class PlayerUnderLevel : MonoBehaviour
         if (resetting) return;
         if (player.transform.position.y < bottomOfMap.transform.position.y)
         {
-            resetPlayerPosition();
+            StartCoroutine(fade(1f, 0f));
         }
     }
     private void resetPlayerPosition()
     {
         player.transform.position = respawnPoint.transform.position;
+        playerRB.linearVelocity = Vector3.zero;
         Debug.Log("Player has fallen below the level. Resetting position.");
     }
 
@@ -43,6 +48,8 @@ public class PlayerUnderLevel : MonoBehaviour
         {
             elapsed += Time.unscaledDeltaTime;
             resetCanvas.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
+            resetPlayerPosition();
+            resetting = false;
             yield return null;
         }
         resetCanvas.alpha = to;
