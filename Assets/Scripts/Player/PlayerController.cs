@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +9,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera camera;
     [SerializeField] float boostStrength;
 
+    [SerializeField] float growSpeed = 2f;
+
     private GameObject currentCheckpoint;
+    private CameraController controller;
+
+    private Vector3 targetScale;
+    private Vector2 targetDistance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-    
+        controller = camera.GetComponent<CameraController>();
+        targetScale = transform.localScale;
+        targetDistance = controller.distanceMultiplier;
     }
 
     // Update is called once per frame
@@ -28,7 +37,16 @@ public class PlayerController : MonoBehaviour
         {
             increaseSize(1f);
         }
+        if (Keyboard.current.minusKey.wasPressedThisFrame)
+        {
+            increaseSize(-1f);
+        }
         #endif
+
+        float t = 1f - Mathf.Exp(-growSpeed * Time.deltaTime);
+        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, t);
+        controller.distanceMultiplier = Vector2.Lerp(controller.distanceMultiplier, targetDistance, t);
+
     }
 
     void OnBoost()
@@ -55,8 +73,8 @@ public class PlayerController : MonoBehaviour
 
     public void increaseSize(float size)
     {
-        transform.localScale += new Vector3(size, size, size);
-        camera.GetComponent<CameraController>().distanceMultiplier += new Vector2(size, size);
+        targetScale += new Vector3(size, size, size);
+        targetDistance += new Vector2(size, size);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,4 +84,6 @@ public class PlayerController : MonoBehaviour
             currentCheckpoint = other.gameObject;
         }
     }
+
+    
 }
