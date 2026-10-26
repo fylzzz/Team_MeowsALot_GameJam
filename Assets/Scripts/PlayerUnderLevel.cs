@@ -29,7 +29,7 @@ public class PlayerUnderLevel : MonoBehaviour
         if (resetting) return;
         if (player.transform.position.y < bottomOfMap.transform.position.y)
         {
-            StartCoroutine(fade(1f, 0f));
+            StartCoroutine(fade(3f, 0f));
         }
     }
     private void resetPlayerPosition()
@@ -48,9 +48,9 @@ public class PlayerUnderLevel : MonoBehaviour
         {
             elapsed += Time.unscaledDeltaTime;
             resetCanvas.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
-            resetPlayerPosition();
             resetting = false;
             yield return null;
+            resetPlayerPosition();
         }
         resetCanvas.alpha = to;
     }
