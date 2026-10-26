@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(force, ForceMode.Impulse);
     }
 
+    public void AddWind(Vector3 force)
+    {
+        rb.AddForce(force, ForceMode.Force);
+    }
+
     public void onDeath()
     {
         rb.linearVelocity = Vector3.zero;
