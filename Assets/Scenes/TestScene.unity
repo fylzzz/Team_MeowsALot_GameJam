@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &54945854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3495331301680033904, guid: bfbd762e0b3cf3846992e1b5be1fb472, type: 3}
+  m_PrefabInstance: {fileID: 1989944748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55284977
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961739753}
   - component: {fileID: 961739752}
+  - component: {fileID: 961739754}
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
   m_Layer: 0
@@ -621,6 +627,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961739754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eebc5df47babff43bf2d4cee65c8217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  player: {fileID: 54945854}
+  mouseSensitivity: 0.1
+  distanceMultiplier: {x: 5, y: 2}
 --- !u!1 &1175995142
 GameObject:
   m_ObjectHideFlags: 0
