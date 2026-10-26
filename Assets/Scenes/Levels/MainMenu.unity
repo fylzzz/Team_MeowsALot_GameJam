@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e21f54aa0e53c443a5668263739d4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  levelToLoad: 
+  levelToLoad: Level 1
   optionsMenu: {fileID: 1471820808}
   OptionsMenuActive: 0
 --- !u!1 &965003525

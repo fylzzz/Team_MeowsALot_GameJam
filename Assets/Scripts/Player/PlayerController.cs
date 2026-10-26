@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     public void onDeath()
     {
         rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         transform.position = currentCheckpoint.transform.position;
     }
 
