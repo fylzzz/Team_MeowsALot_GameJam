@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera camera;
     [SerializeField] float boostStrength;
 
+    private GameObject currentCheckpoint;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +19,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        #if UNITY_EDITOR
+        if (Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            onDeath();
+        }
+        #endif
     }
 
     void OnBoost()
@@ -28,5 +35,19 @@ public class PlayerController : MonoBehaviour
     public void AddImpulse(Vector3 force)
     {
         rb.AddForce(force, ForceMode.Impulse);
+    }
+
+    public void onDeath()
+    {
+        rb.linearVelocity = Vector3.zero;
+        transform.position = currentCheckpoint.transform.position;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Checkpoint"))
+        {
+            currentCheckpoint = other.gameObject;
+        }
     }
 }
