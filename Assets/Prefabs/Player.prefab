@@ -185,5 +185,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   rb: {fileID: 5592642733928446574}
-  camera: {fileID: 0}
+  camera: {fileID: 4446686584973128863, guid: cb5642b1342afe148b517b48e6ac2cfe, type: 3}
   boostStrength: 1
