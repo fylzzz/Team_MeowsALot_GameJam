@@ -18,6 +18,15 @@ public class Monsters : MonoBehaviour
         if (player == null) return;
 
         player.increaseSize(sizeIncrease);
-        Destroy(gameObject);
+
+        // stop the monster affecting physics once attached
+        foreach (var col in GetComponentsInChildren<Collider>())
+            col.enabled = false;
+
+        var monsterRb = GetComponent<Rigidbody>();
+        if (monsterRb != null) Destroy(monsterRb);
+
+        enabled = false; // stop the spin
+        transform.SetParent(player.transform);
     }
 }
