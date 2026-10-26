@@ -24,4 +24,9 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce((camera.transform.forward * boostStrength), ForceMode.Impulse);
     }
+
+    public void AddImpulse(Vector3 force)
+    {
+        rb.AddForce(force, ForceMode.Impulse);
+    }
 }
