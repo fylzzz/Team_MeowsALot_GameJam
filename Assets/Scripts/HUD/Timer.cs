@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
         timerRoutine = StartCoroutine(TimerRoutine());
     }
 
-    private void StopTimer()
+    public void StopTimer()
     {
         if (timerRoutine == null) return;
         StopCoroutine(timerRoutine);
