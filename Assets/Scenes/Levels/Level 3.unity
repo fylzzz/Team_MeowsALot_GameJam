@@ -1624,6 +1624,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 724104475}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: levelTimer
+      value: 
+      objectReference: {fileID: 788803716}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: finalTimeText
+      value: 
+      objectReference: {fileID: 788803719}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: endPanelCanvas
+      value: 
+      objectReference: {fileID: 788803721}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: finalScoreText
+      value: 
+      objectReference: {fileID: 788803717}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: monstersInLevel
+      value: 
+      objectReference: {fileID: 788803715}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1819347070}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: endMainMenuButton
+      value: 
+      objectReference: {fileID: 788803720}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: finalCollectedText
+      value: 
+      objectReference: {fileID: 788803718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5576,6 +5612,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+--- !u!114 &788803715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8106603177248168690, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f486da34ae14aab45bb9a82ebdff21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonstersInLevel
+--- !u!114 &788803716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511922431566821291, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1518b807c673b4a9bc4e361bb29669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+--- !u!114 &788803717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8527329670080356536, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &788803718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6269417436659908522, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &788803719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1105954805262921394, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &788803720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1428606875527610821, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &788803721 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2250413379503057230, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+  m_PrefabInstance: {fileID: 788803714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &800669770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11185,6 +11286,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5642b1342afe148b517b48e6ac2cfe, type: 3}
+--- !u!114 &1819347070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4325506058578414220, guid: cb5642b1342afe148b517b48e6ac2cfe, type: 3}
+  m_PrefabInstance: {fileID: 1819347069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eebc5df47babff43bf2d4cee65c8217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
 --- !u!1001 &1819502469
 PrefabInstance:
   m_ObjectHideFlags: 0
