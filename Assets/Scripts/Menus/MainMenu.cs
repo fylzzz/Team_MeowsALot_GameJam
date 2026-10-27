@@ -38,10 +38,10 @@ public class MainMenu : MonoBehaviour
     {
         levelSelect.SetActive(false);
     }
-    public void LoadLevel(int buildIndex)
+    public void LoadLevel(string levelName)
 {
     Time.timeScale = 1f;
-    SceneManager.LoadScene(buildIndex);
+    SceneManager.LoadScene(levelName);
 }
     public void RestartLevel()
     {
