@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9000947191308507029}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
 --- !u!23 &8452880317490966333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -107,7 +107,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Monsters
   sizeIncrease: 0.3
   spinSpeed: 60
+  bobHeight: 0.25
+  bobSpeed: 2
   monstersInLevel: {fileID: 0}
+  meshFilters: {fileID: 3759029664514927231}
+  meshRenderer: {fileID: 8452880317490966333}
+  monsterMeshes:
+  - {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
+  - {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
+  - {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
+  - {fileID: -6151396826438944277, guid: 8a7c8b89081913d4c99df80f698fe037, type: 3}
+  monsterMaterials:
+  - {fileID: 2100000, guid: 9ff318c8066533b408f2f9dec4f3b749, type: 2}
+  - {fileID: 2100000, guid: 7132ad2f8719d9f49a3f562b85c153dc, type: 2}
+  - {fileID: 2100000, guid: 963117e499936bf4b868035fbc5c75c2, type: 2}
+  - {fileID: 2100000, guid: b9ebc2abe6b37d443a4801e05fdd0112, type: 2}
 --- !u!136 &2932055301734538159
 CapsuleCollider:
   m_ObjectHideFlags: 0

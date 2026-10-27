@@ -14,6 +14,20 @@ public class Monsters : MonoBehaviour
 
     public MonstersInLevel monstersInLevel;
 
+    [SerializeField] private MeshFilter meshFilters;
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Mesh [] monsterMeshes;
+    [SerializeField] private Material[] monsterMaterials;
+
+    [SerializeField] private int randomIndex;
+
+    private void Awake()
+    {
+        randomIndex = Random.Range(0, monsterMeshes.Length);
+
+        meshFilters.mesh = monsterMeshes[randomIndex];
+        meshRenderer.material = monsterMaterials[randomIndex];
+    }
     private void Start()
     {
         if (monstersInLevel == null)
