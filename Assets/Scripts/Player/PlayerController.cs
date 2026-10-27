@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ParticleSystem slimeParticles;
     [SerializeField] AudioSource slimeSFX;
     [SerializeField] AudioSource deathSFX;
+    [SerializeField] CanvasGroup pauseMenu;
 
     [Header("Variables")]
     [SerializeField] float boostStrength;
