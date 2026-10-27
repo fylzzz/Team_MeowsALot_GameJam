@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] Camera camera;
     [SerializeField] ParticleSystem slimeParticles;
+    [SerializeField] AudioSource slimeSFX;
 
     [Header("Variables")]
     [SerializeField] float boostStrength;
@@ -58,7 +59,13 @@ public class PlayerController : MonoBehaviour
         slimeParticles.transform.position = transform.position - (camera.transform.forward * transform.localScale.x);
         slimeParticles.transform.rotation = camera.transform.rotation;
 
-        slimeParticles.Play();
+        if (slimeParticles != null) slimeParticles.Play();
+        if (slimeSFX != null)
+        {
+            slimeSFX.pitch = Random.Range(0.5f, 1f);
+            slimeSFX.Play();
+        }
+
     }
 
     public void AddImpulse(Vector3 force)
