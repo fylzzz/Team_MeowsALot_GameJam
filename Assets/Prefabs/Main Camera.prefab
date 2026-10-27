@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   player: {fileID: 3495331301680033904, guid: bfbd762e0b3cf3846992e1b5be1fb472, type: 3}
   mouseSensitivity: 0.1
+  gamepadSensitivity: 180
   distanceMultiplier: {x: 5, y: 2}
 --- !u!114 &7459169208082658876
 MonoBehaviour:
