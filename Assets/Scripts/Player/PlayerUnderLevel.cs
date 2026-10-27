@@ -51,7 +51,7 @@ public class PlayerUnderLevel : MonoBehaviour
         {
             elapsed += Time.unscaledDeltaTime;
             resetCanvas.alpha = Mathf.Lerp(from, to, elapsed / fadeDuration);
-            fadeCanvas.transform.localScale = Vector3.Lerp(new Vector3(from, from, from)*20, new Vector3(to, to, to)*20, elapsed / fadeDuration);
+            fadeCanvas.transform.localScale = Vector3.Lerp(new Vector3(from*37, from*21, from), new Vector3(to*37, to*21, to), elapsed / fadeDuration);
             resetting = false;
             yield return null;
         }
