@@ -27,4 +27,10 @@ public class MainMenu : MonoBehaviour
             OptionsMenuActive = false;
         }
     }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
