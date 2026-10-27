@@ -5585,6 +5585,10 @@ PrefabInstance:
       propertyPath: SlimeUI
       value: 
       objectReference: {fileID: 1080980598}
+    - target: {fileID: 3579334218777814320, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4165582063921945393, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
       propertyPath: m_IsActive
       value: 0
