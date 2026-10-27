@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera camera;
     [SerializeField] ParticleSystem slimeParticles;
     [SerializeField] AudioSource slimeSFX;
+    [SerializeField] AudioSource deathSFX;
 
     [Header("Variables")]
     [SerializeField] float boostStrength;
@@ -83,6 +84,8 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         transform.position = currentCheckpoint.transform.position;
+
+        deathSFX.Play();
     }
 
     public void increaseSize(float size)

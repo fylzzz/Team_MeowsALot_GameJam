@@ -18,6 +18,9 @@ public class PlayerUnderLevel : MonoBehaviour
     [SerializeField] GameObject fadeCanvas;
     [SerializeField] float fadeTime;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource respawnSFX;
+
     private bool resetting;
 
     private void Start()
@@ -32,6 +35,7 @@ public class PlayerUnderLevel : MonoBehaviour
         if (resetting) return;
         if (player.transform.position.y < bottomOfMap.transform.position.y)
         {
+            respawnSFX.Play();
             StartCoroutine(fateToandFrom());
         }
     }
