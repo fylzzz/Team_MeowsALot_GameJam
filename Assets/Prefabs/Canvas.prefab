@@ -1108,6 +1108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   levelToLoad: 
   optionsMenu: {fileID: 0}
+  levelSelect: {fileID: 0}
   OptionsMenuActive: 0
 --- !u!1 &3766931041010039416
 GameObject:
@@ -1458,11 +1459,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6469142885079500596}
   - {fileID: 1422579326881990731}
   - {fileID: 35938748752598178}
   - {fileID: 2346792789377954357}
   - {fileID: 7327434015624757717}
+  - {fileID: 6469142885079500596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
