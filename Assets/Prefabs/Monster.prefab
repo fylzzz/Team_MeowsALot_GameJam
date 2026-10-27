@@ -117,11 +117,14 @@ MonoBehaviour:
   - {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
   - {fileID: -1026932297956980677, guid: 55c6660f3b2688b488ffd4968f82254a, type: 3}
   - {fileID: -6151396826438944277, guid: 8a7c8b89081913d4c99df80f698fe037, type: 3}
+  - {fileID: 8588604624045466707, guid: cac9fd984cc70094485e5c76c3537f1c, type: 3}
   monsterMaterials:
   - {fileID: 2100000, guid: 9ff318c8066533b408f2f9dec4f3b749, type: 2}
   - {fileID: 2100000, guid: 7132ad2f8719d9f49a3f562b85c153dc, type: 2}
   - {fileID: 2100000, guid: 963117e499936bf4b868035fbc5c75c2, type: 2}
   - {fileID: 2100000, guid: b9ebc2abe6b37d443a4801e05fdd0112, type: 2}
+  - {fileID: 2100000, guid: 1aa23c6d6eef0a544983eea9cf4a533c, type: 2}
+  randomIndex: 0
 --- !u!136 &2932055301734538159
 CapsuleCollider:
   m_ObjectHideFlags: 0
