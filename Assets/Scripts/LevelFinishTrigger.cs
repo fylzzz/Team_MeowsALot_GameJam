@@ -10,6 +10,7 @@ public class LevelFinishTrigger : MonoBehaviour
     [SerializeField] private GameObject endMainMenuButton; // optional, for controller/keyboard focus
     [SerializeField] private TMP_Text finalTimeText;       // optional
     [SerializeField] private TMP_Text finalCollectedText;
+    [SerializeField] private TMP_Text finalScoreText;
     [SerializeField] private float fadeDuration = 1f;
 
     [Header("Effects")]
@@ -19,6 +20,8 @@ public class LevelFinishTrigger : MonoBehaviour
     [Header("References")]
     [SerializeField] private Timer levelTimer;
     [SerializeField] private MonstersInLevel monstersInLevel;
+    [SerializeField] private PlayerController player;
+    [SerializeField] private CameraController cameraController;
 
     private bool finished;
 
@@ -55,6 +58,16 @@ public class LevelFinishTrigger : MonoBehaviour
             finalCollectedText.text = "Monsters Collected: " + monstersInLevel.monsterCount +
                                       "/" + monstersInLevel.monstersInLevel.Count;
         }
+        if (finalScoreText != null && levelTimer != null && monstersInLevel != null)
+        {
+            int total = ScoreCalc.Total(levelTimer.GetTime(), monstersInLevel.monsterCount);
+            finalScoreText.text = "Score: " + total.ToString("N0");
+        }
+
+        if (player != null) player.Freeze();
+        if (cameraController != null) cameraController.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         endPanelCanvas.gameObject.SetActive(true);
         endPanelCanvas.interactable = true;

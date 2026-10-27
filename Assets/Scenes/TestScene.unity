@@ -700,6 +700,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352236411}
   m_CullTransparentMesh: 1
+--- !u!114 &465131898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4325506058578414220, guid: cb5642b1342afe148b517b48e6ac2cfe, type: 3}
+  m_PrefabInstance: {fileID: 756647086}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eebc5df47babff43bf2d4cee65c8217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
 --- !u!1 &488587775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1477,7 @@ GameObject:
   - component: {fileID: 1108862155}
   - component: {fileID: 1108862154}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Final Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2081,6 +2092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   levelToLoad: 
   optionsMenu: {fileID: 0}
+  levelSelect: {fileID: 0}
   OptionsMenuActive: 0
 --- !u!1 &1604827822
 GameObject:
@@ -2325,6 +2337,10 @@ PrefabInstance:
       value: FinishTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 908039312}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
       propertyPath: levelTimer
       value: 
       objectReference: {fileID: 5681789319578494438}
@@ -2337,9 +2353,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1458570388}
     - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: finalScoreText
+      value: 
+      objectReference: {fileID: 1108862154}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
       propertyPath: monstersInLevel
       value: 
       objectReference: {fileID: 1444999812}
+    - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 465131898}
     - target: {fileID: 3996502974103508464, guid: f428dc3eff7509141892aa18ef625922, type: 3}
       propertyPath: endMainMenuButton
       value: 
@@ -2481,9 +2505,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -36
       objectReference: {fileID: 0}
+    - target: {fileID: 1497690149328043371, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -377.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953192929763377026, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -377.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 2296589591757225534, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246771215271342094, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -377
       objectReference: {fileID: 0}
     - target: {fileID: 3511922431566821291, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
       propertyPath: player
@@ -2497,6 +2533,10 @@ PrefabInstance:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 1272864775}
+    - target: {fileID: 3579334218777814320, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4106654061487204642, guid: 8d87fe5900a8c7046852ef951ae2c894, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 452
