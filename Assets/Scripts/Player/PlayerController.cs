@@ -85,5 +85,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Freeze()
+    {
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    
+    public void UnFreeze()
+    {
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
     
 }
