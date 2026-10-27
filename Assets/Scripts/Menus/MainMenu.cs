@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]private string levelToLoad;
     public GameObject optionsMenu;
+    public GameObject levelSelect;
     public bool OptionsMenuActive = false;
     public void startGame()
     {
@@ -28,6 +29,20 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void OpenLevelSelect()
+    {
+        levelSelect.SetActive(true);
+    }
+
+    public void CloseLevelSelect()
+    {
+        levelSelect.SetActive(false);
+    }
+    public void LoadLevel(int buildIndex)
+{
+    Time.timeScale = 1f;
+    SceneManager.LoadScene(buildIndex);
+}
     public void RestartLevel()
     {
         Time.timeScale = 1.0f;
