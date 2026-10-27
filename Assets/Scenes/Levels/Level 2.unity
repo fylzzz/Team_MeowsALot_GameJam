@@ -1469,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1760291795480260970, guid: b6e8975e6535b2f48a26f04004f7ad32, type: 3}
       propertyPath: boostForce
-      value: 7
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 9030951119405784652, guid: b6e8975e6535b2f48a26f04004f7ad32, type: 3}
       propertyPath: m_LocalPosition.x

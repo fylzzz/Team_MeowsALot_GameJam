@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 targetScale;
     private Vector2 targetDistance;
 
+    private float resetTime = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,6 +70,16 @@ public class PlayerController : MonoBehaviour
             slimeSFX.Play();
         }
 
+    }
+
+    void OnReset()
+    {
+        resetTime=- Time.deltaTime;
+
+        if (resetTime < 0f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void AddImpulse(Vector3 force)
