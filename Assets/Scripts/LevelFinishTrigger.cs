@@ -9,6 +9,7 @@ public class LevelFinishTrigger : MonoBehaviour
     [SerializeField] private CanvasGroup endPanelCanvas;
     [SerializeField] private GameObject endMainMenuButton; // optional, for controller/keyboard focus
     [SerializeField] private TMP_Text finalTimeText;       // optional
+    [SerializeField] private TMP_Text finalCollectedText;
     [SerializeField] private float fadeDuration = 1f;
 
     [Header("Effects")]
@@ -17,6 +18,7 @@ public class LevelFinishTrigger : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Timer levelTimer;
+    [SerializeField] private MonstersInLevel monstersInLevel;
 
     private bool finished;
 
@@ -43,9 +45,15 @@ public class LevelFinishTrigger : MonoBehaviour
             if (finalTimeText != null)
             {
                 System.TimeSpan t = System.TimeSpan.FromSeconds(levelTimer.GetTime());
-                finalTimeText.text = string.Format("{0:00}:{1:00}:{2:00}",
+                finalTimeText.text = string.Format("Time: {0:00}:{1:00}:{2:00}",
                     t.Minutes, t.Seconds, t.Milliseconds / 10);
             }
+        }
+
+        if (monstersInLevel != null && finalCollectedText != null)
+        {
+            finalCollectedText.text = "Monsters Collected: " + monstersInLevel.monsterCount +
+                                      "/" + monstersInLevel.monstersInLevel.Count;
         }
 
         endPanelCanvas.gameObject.SetActive(true);
