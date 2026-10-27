@@ -4301,6 +4301,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 572575523237882116, guid: bfbd762e0b3cf3846992e1b5be1fb472, type: 3}
   m_PrefabInstance: {fileID: 1357100729}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &724365811 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+  m_PrefabInstance: {fileID: 1845197049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &724982232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: da96600303f215f4bb02caf16c8d29eb, type: 3}
@@ -7428,6 +7433,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 441044641}
+    - target: {fileID: 7067485310539689047, guid: bfbd762e0b3cf3846992e1b5be1fb472, type: 3}
+      propertyPath: slimeParticles
+      value: 
+      objectReference: {fileID: 724365811}
     - target: {fileID: 9049307245300824833, guid: bfbd762e0b3cf3846992e1b5be1fb472, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -9999,6 +10008,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: lengthInSec
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
       propertyPath: ShapeModule.type
       value: 5
       objectReference: {fileID: 0}
@@ -10019,6 +10036,14 @@ PrefabInstance:
       value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.5
       objectReference: {fileID: 0}
@@ -10031,12 +10056,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 638010929}
     - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
+      propertyPath: EmissionModule.rateOverTime.maxCurve.m_Curve.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope

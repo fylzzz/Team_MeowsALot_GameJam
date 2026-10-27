@@ -4,11 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
+    [Header("References")] 
     [SerializeField] Rigidbody rb;
     [SerializeField] Camera camera;
-    [SerializeField] float boostStrength;
+    [SerializeField] ParticleSystem slimeParticles;
 
+    [Header("Variables")]
+    [SerializeField] float boostStrength;
     [SerializeField] float growSpeed = 2f;
 
     private GameObject currentCheckpoint;
@@ -52,6 +54,11 @@ public class PlayerController : MonoBehaviour
     void OnBoost()
     {
         rb.AddForce((camera.transform.forward * boostStrength), ForceMode.Impulse);
+
+        slimeParticles.transform.position = transform.position - (camera.transform.forward * transform.localScale.x);
+        slimeParticles.transform.rotation = camera.transform.rotation;
+
+        slimeParticles.Play();
     }
 
     public void AddImpulse(Vector3 force)

@@ -186,4 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   rb: {fileID: 5592642733928446574}
   camera: {fileID: 4446686584973128863, guid: cb5642b1342afe148b517b48e6ac2cfe, type: 3}
+  slimeParticles: {fileID: 959954396345895083, guid: 8ad9c23a92705c14ebf424250edeb822, type: 3}
   boostStrength: 1
+  growSpeed: 2
